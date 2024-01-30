@@ -27,7 +27,7 @@ The adapter acts as a bridge between two incompatible interfaces.
 
  * Implementation: -----------------------> 
  ---> Step 1: Add the Adaptee (Existing Class) -- There is no change
- ---> Step 2: Define the Target Interface (Adapter Interface)
+ ---> Step 2: Define the Target Interface (Adapter Interface) the client code expects
  ---> Step 3: Implement the Adapter
 
  * Real-World Scenario: ------------------> 
