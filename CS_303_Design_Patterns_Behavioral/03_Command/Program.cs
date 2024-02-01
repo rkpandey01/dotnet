@@ -44,6 +44,30 @@ user.ExecuteOperation();
 user.SetCommand(undoCommand);
 user.ExecuteOperation();
 
+Console.WriteLine("Ex 03: UNDO----------------------------");
+Receiver receiver = new Receiver();
+Invoker invoker = new Invoker();
+
+// Adding text
+invoker.SetCommand(new AddTextCommand(receiver, "Hello, "));
+invoker.ExecuteCommand();
+
+// Adding more text
+invoker.SetCommand(new AddTextCommand(receiver, "Command Pattern! "));
+invoker.ExecuteCommand();
+
+// Show current text
+receiver.ShowText();  // Output: Hello, Command Pattern!
+
+// Undo the last command
+invoker.UndoLastCommand();
+
+// Show text after undo
+receiver.ShowText();  // Output: Hello,
+
+// Undo again (nothing to undo)
+invoker.UndoLastCommand();  // Output: Nothing to undo.
+
 Console.ReadKey();
 
 /*
