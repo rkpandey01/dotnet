@@ -1,7 +1,7 @@
 ﻿using _01_Observer;
 
 Console.WriteLine("01_Observer:");
-
+Console.WriteLine("Ex 01: --------------------------------");
 WeatherStation weatherStation = new WeatherStation();
 
 CurrentConditionsDisplay currentConditionsDisplay = new CurrentConditionsDisplay();
